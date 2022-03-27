@@ -1,0 +1,29 @@
+<html>
+<body>
+
+<label for="text1">Masukkan Input</label><br>
+<input type="text" id="text1"></input>
+<input type="button" id="button1" value="Add" onclick="add();"></input><br><br>
+<label for="text1">Masukkan Radix</label><br>
+<input type="text" id="text2"></input>
+<input type="button" id="button1" value="Radix" onclick="radix();"></input>
+
+<p id="demo"></p>
+
+<script>
+    let num = 0;
+    let rdx = 0;
+    function add(){
+        num = document.getElementById("text1").value;
+        document.getElementById("text1").value = "";
+    }
+
+    function radix(){
+        rdx = document.getElementById("text2").value;
+        document.getElementById("text2").value = "";
+        document.getElementById("demo").innerHTML = num.toString(rdx);
+    }
+</script>
+
+</body>
+</html>
